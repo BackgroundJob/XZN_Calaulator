@@ -37,6 +37,17 @@ namespace Calculator
 
         public void operation(String op_sign)//选择运算方式后的方法
         {
+            String op_name="";
+            switch (op_sign)
+            {
+                case "add": op_name="加法"; break;
+                case "sub": op_name = "减法"; break;
+                case "mul": op_name = "乘法"; break;
+                case "div": op_name = "除法";  break;
+                case "power": op_name = "n次方"; break;
+                case "antipow": op_name = "开方"; break;
+
+            }
             stop_timer();
             if (checknum(textBox.Text))
             {
@@ -44,7 +55,7 @@ namespace Calculator
                 textBox.Text = "";
                 Is_sign_input = true;
                 sign = op_sign;
-                info.Text = "请输入第二个运算数";
+                info.Text = "已选择算法："+op_name+"   请输入第二个运算数";
             }
             else
             {
@@ -58,6 +69,7 @@ namespace Calculator
             number2 = 0;
             Is_sign_input = false;
             sign = "";
+
         }
 
     private void button_add_Click(object sender, EventArgs e)
@@ -104,6 +116,7 @@ namespace Calculator
                        
                 }
                 textBox.Text = Convert.ToString(result);
+                info.Text = "已算出结果";
                 reset();
             }
             else
@@ -138,6 +151,7 @@ namespace Calculator
                 result = number1 * number1;
                 textBox.Text = Convert.ToString(result);
                 reset();
+                info.Text = "已算出结果";
             }
         }
 
@@ -185,6 +199,7 @@ namespace Calculator
                     result = Math.Sin(RadianValue);
                     textBox.Text = Convert.ToString(result);
                     reset();
+                    info.Text = "已算出结果";
                 }
                
             }
@@ -207,6 +222,7 @@ namespace Calculator
                     result = Math.Cos(RadianValue);
                     textBox.Text = Convert.ToString(result);
                     reset();
+                    info.Text = "已算出结果";
                 }
 
             }
@@ -221,7 +237,8 @@ namespace Calculator
                 int a = (int)number1;
                 textBox.Text = Convert.ToString(a,2);
                 result = double.Parse(textBox.Text);
-                
+                info.Text = "已算出结果";
+
             }
 
         }
@@ -235,7 +252,8 @@ namespace Calculator
                 int a = (int)number1;
                 textBox.Text = Convert.ToString(a, 16);
                 result = double.Parse(textBox.Text);
-               
+                info.Text = "已算出结果";
+
             }
         }
 
@@ -248,6 +266,7 @@ namespace Calculator
                 result = Math.Log(number1);
                 textBox.Text = Convert.ToString(result);
                 reset();
+                info.Text = "已算出结果";
             }
         }
 
