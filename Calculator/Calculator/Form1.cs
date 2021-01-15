@@ -26,6 +26,7 @@ namespace Calculator
         string sign;
         System.Timers.Timer myTimer;
         bool timer_start=false;
+        bool is_button_choosed;
 
 
         public bool checknum (String value)//判断输入的字符串是否为一个合理的数字
@@ -37,6 +38,17 @@ namespace Calculator
 
         public void operation(String op_sign)//确定运算符号的方法
         {
+            String op_name="";
+            switch (op_sign)
+            {
+                case "add": op_name="加法"; break;
+                case "sub": op_name = "减法"; break;
+                case "mul": op_name = "乘法"; break;
+                case "div": op_name = "除法"; break;
+                case "power": op_name = "n次方";break;
+                case "antipow": op_name = "开方"; break;
+
+            }
             stop_timer();
             if (checknum(textBox.Text))
             {
@@ -44,7 +56,7 @@ namespace Calculator
                 textBox.Text = "";
                 Is_sign_input = true;
                 sign = op_sign;
-                info.Text = "请输入第二个运算数";
+                info.Text = "已选择算法:"+op_name+"    " +"请输入第二个运算数";
             }
             else
             {
@@ -82,6 +94,7 @@ namespace Calculator
 
         private void button_result_Click(object sender, EventArgs e)
         {
+            
             stop_timer();
             if (Is_sign_input && checknum(textBox.Text))
             {
@@ -104,7 +117,7 @@ namespace Calculator
                        
                 }
                 textBox.Text = Convert.ToString(result);
-                reset();
+                info.Text = "已算出结果";
             }
             else
             {
@@ -137,7 +150,7 @@ namespace Calculator
                 number1 = double.Parse(textBox.Text);
                 result = number1 * number1;
                 textBox.Text = Convert.ToString(result);
-                reset();
+                info.Text = "已算出结果";
             }
         }
 
@@ -184,7 +197,7 @@ namespace Calculator
                     double RadianValue = Math.PI * number1 / 180;
                     result = Math.Sin(RadianValue);
                     textBox.Text = Convert.ToString(result);
-                    reset();
+                    info.Text = "已算出结果";
                 }
                
             }
@@ -206,13 +219,13 @@ namespace Calculator
                     double RadianValue = Math.PI * number1 / 180;
                     result = Math.Cos(RadianValue);
                     textBox.Text = Convert.ToString(result);
-                    reset();
+                    info.Text = "已算出结果";
                 }
 
             }
         }
 
-        private void button_Binary_Click(object sender, EventArgs e)
+        private void button_Binary_Click(object sender, EventArgs e)//十进制转二进制
         {
             stop_timer();
             if (checknum(textBox.Text))
@@ -221,12 +234,12 @@ namespace Calculator
                 int a = (int)number1;
                 textBox.Text = Convert.ToString(a,2);
                 result = double.Parse(textBox.Text);
-                
+                info.Text = "已算出结果";
             }
 
         }
 
-        private void button_hex_Click(object sender, EventArgs e)
+        private void button_hex_Click(object sender, EventArgs e)//十进制转十六进制
         {
             stop_timer();
             if (checknum(textBox.Text))
@@ -235,7 +248,7 @@ namespace Calculator
                 int a = (int)number1;
                 textBox.Text = Convert.ToString(a, 16);
                 result = double.Parse(textBox.Text);
-               
+                info.Text = "已算出结果";
             }
         }
 

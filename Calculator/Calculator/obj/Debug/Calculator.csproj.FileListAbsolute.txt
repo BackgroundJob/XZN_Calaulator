@@ -8,3 +8,13 @@ C:\Users\ASUS\source\repos\Calculator\Calculator\obj\Debug\Calculator.csproj.Gen
 C:\Users\ASUS\source\repos\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\source\repos\Calculator\Calculator\obj\Debug\Calculator.exe
 C:\Users\ASUS\source\repos\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\ASUS\Desktop\XZN_Calaulator\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\ASUS\Desktop\XZN_Calaulator\Calculator\Calculator\bin\Debug\Calculator.exe
+C:\Users\ASUS\Desktop\XZN_Calaulator\Calculator\Calculator\bin\Debug\Calculator.pdb
+C:\Users\ASUS\Desktop\XZN_Calaulator\Calculator\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\XZN_Calaulator\Calculator\Calculator\obj\Debug\Calculator.Form1.resources
+C:\Users\ASUS\Desktop\XZN_Calaulator\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Users\ASUS\Desktop\XZN_Calaulator\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\XZN_Calaulator\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\XZN_Calaulator\Calculator\Calculator\obj\Debug\Calculator.exe
+C:\Users\ASUS\Desktop\XZN_Calaulator\Calculator\Calculator\obj\Debug\Calculator.pdb
